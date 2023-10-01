@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>School Store</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+           
+            background-size: cover;
+        }
+
+        .navbar {
+            background-color::#728C00;
+        }
+
+        .navbar-brand {
+            color: #551606;
+            font-size: 24px;
+            font-weight:800px;
+        }
+
+        .nav-link {
+            color: #551606;
+        }
+
+        .container {
+            text-align: center;
+            margin-top: 200px;
+            padding: 20px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color:#B6B6B4;
+            padding: 10px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg  navbar-dark bg-primary fixed-top">
+        <a class="navbar-brand" href="#">School Store</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    {% comment %} <a class="nav-link" href="login.html">Login</a> {% endcomment %}
+                    <a class="nav-link" href="{% url 'login' %}" class="btn btn-primary">Login</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'register' %}" class="btn btn-primary">Register</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="{% url "new_page" %}" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                        Department
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Computer_science">Computer Science</a>
+                        <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Commerce">Commerce</a>
+                        <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Humanities">Humanities</a>
+                        <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Mathematics">Mathematics</a>
+                        <a class="dropdown-item" href="https://en.wikipedia.org/wiki/Electronics">Electronics</a>
+                        <!-- Add more department links here -->
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Welcome to the School Store</h1>
+        <!-- Add your content here -->
+        <button type="submit" class="btn btn-primary" onclick="location.href='{% url 'login' %}'">Login</button>
+    </div>
+
+  
+    <div class="footer navbar-fixed-bottom my_footer">
+        <p class="text-center">&copy; online School Store pvt ltd. All rights Reserved</p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
